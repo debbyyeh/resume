@@ -31,6 +31,7 @@
     display: block;
     max-width: 100%;
     height: 100%;
+    position: relative;
     img {
       border-radius: 50px;
       object-fit: cover;
@@ -40,10 +41,10 @@
   }
 }
 .intro {
-  width: 40%;
+  width: 50%;
   position: absolute;
   right: 5%;
-  bottom: 35%;
+  bottom: 30%;
   text-align: center;
   h1 {
     font-size: 40px;
@@ -62,6 +63,7 @@
     padding: 20px 60px;
     top: 0;
     right: 0;
+    bottom: 45%;
     h1 {
       font-size: 36px;
     }
@@ -102,7 +104,7 @@
   height: 400px;
 }
 .circle1 {
-  right: 200px;
+  left: -70px;
   bottom: -100px;
   background-color: $second;
   display: flex;
@@ -118,7 +120,7 @@
   box-shadow: 2px 4px 12px;
   width: 250px;
   height: 250px;
-  right: 75px;
+  left: 200px;
   bottom: -125px;
   z-index: 2;
   display: flex;
@@ -130,41 +132,51 @@
     }
   }
   @media (max-width: 767px) {
-    right: -125px;
-    bottom: 50px;
-    flex-direction: column;
-    padding-top: 0;
-    padding-left: 45px;
-    box-shadow: 0 0 0;
-  }
-  @media (max-width: 414px) {
-    width: 150px;
-    height: 150px;
-    right: -75px;
-    bottom: 20px;
-    padding-left: 25px;
-    padding-bottom: 75px;
+    display: none;
   }
 }
-.socialPhone,
-.socialPhone1,
-.socialPhone2 {
+.circle3 {
+  position: absolute;
+  background-color: $backgroundColor;
+  right: -75px;
+  bottom: -45px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 414px) {
+    right: -35px;
+    bottom: -25px;
+    width: 100px;
+    height: 100px;
+  }
+}
+.socialPhone {
   display: none;
   @media (max-width: 767px) {
     display: block;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
+  }
+  .socialPhone1,
+  .socialPhone2 {
     img {
-      width: 65px;
-      height: 65px;
-      margin: 8px 0px;
+      margin: 4px 0px;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      @media (max-width: 414px) {
+        width: 35px;
+        height: 35px;
+      }
     }
   }
-  @media (max-width: 414px) {
-    width: 40px;
-    height: 40px;
-  }
 }
+
 h3 {
   color: $second;
   font-size: 32px;
