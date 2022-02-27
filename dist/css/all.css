@@ -676,6 +676,7 @@ h4 {
 }
 .working > p {
   opacity: 30%;
+  cursor: pointer;
 }
 .working > p:hover {
   opacity: 100%;
