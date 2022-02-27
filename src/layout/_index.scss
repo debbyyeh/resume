@@ -1,0 +1,326 @@
+@import '../setting/helper';
+
+.banner {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  @include bg($backgroundColor);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  // @media (max-width: 992px) {
+  //   height: auto;
+  // }
+}
+
+.profile {
+  opacity: 50%;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.profilePhone {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    img {
+      border-radius: 50px;
+      object-fit: cover;
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+}
+.intro {
+  width: 40%;
+  position: absolute;
+  right: 5%;
+  bottom: 35%;
+  text-align: center;
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 28px;
+  }
+  @media (max-width: 992px) {
+    width: 80%;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 20px 60px;
+    top: 0;
+    right: 0;
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 414px) {
+    padding: 20px 40px;
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+.introPhone {
+  margin-bottom: 20px;
+}
+.socialTitle {
+  font-size: 20px;
+  padding: 10px 0px;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+.circle {
+  border-radius: 100%;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+.circle1 {
+  right: 200px;
+  bottom: -100px;
+  background-color: $second;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 65px;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+.circle2 {
+  background-color: $backgroundColor;
+  box-shadow: 2px 4px 12px;
+  width: 250px;
+  height: 250px;
+  right: 75px;
+  bottom: -125px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding-top: 65px;
+  > a {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    right: -125px;
+    bottom: 50px;
+    flex-direction: column;
+    padding-top: 0;
+    padding-left: 45px;
+    box-shadow: 0 0 0;
+  }
+  @media (max-width: 414px) {
+    border-color: transparent;
+    width: 150px;
+    height: 150px;
+    right: -75px;
+    bottom: 20px;
+    padding-left: 25px;
+    padding-bottom: 75px;
+  }
+}
+.socialPhone,
+.socialPhone1,
+.socialPhone2 {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 65px;
+      height: 65px;
+      margin: 8px 0px;
+    }
+  }
+  @media (max-width: 414px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+h3 {
+  color: $second;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 20%;
+  margin-bottom: 16px;
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+  @media (max-width: 414px) {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+h4 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-bottom: 4px;
+}
+.contentBg {
+  background-color: black;
+  opacity: 80%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.mainContent {
+  border: 1px solid $primary;
+  border-radius: 50px;
+  display: flex;
+  padding: 60px;
+  @media (max-width: 992px) {
+    padding: 40px;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 20px;
+    border: none;
+  }
+}
+.contentPart1,
+.contentPart2 {
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+  @media (max-width: 414px) {
+    font-size: 20px;
+  }
+}
+.github {
+  color: $primary;
+}
+
+.contactList {
+  margin: 0 auto;
+}
+.contact {
+  img {
+    padding-right: 12px;
+  }
+}
+.skillList {
+  text-align: left;
+  li {
+    padding-bottom: 8px;
+  }
+  p {
+    padding-bottom: 4px;
+  }
+}
+.rate {
+  @include rate;
+}
+.lineSection {
+  position: relative;
+  ::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    background-color: $primary;
+    left: -15px;
+    transform: translateX(-15px);
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+.linePoint {
+  ::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 13px;
+    bottom: 0;
+    background-color: $primary;
+    left: -35px;
+    transform: translateX(10%);
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+.working {
+  div {
+    display: none;
+  }
+  > p {
+    opacity: 30%;
+    &:hover {
+      opacity: 100%;
+    }
+    &:active {
+      color: $hightlight;
+    }
+  }
+}
+
+.workingTitle {
+  margin-bottom: 0;
+}
+.jobDescription {
+  border-radius: 50px;
+  border: 1px solid $primary;
+  margin: 0 auto;
+  padding: 24px;
+  height: 800px;
+  overflow-y: scroll;
+  h3 {
+    text-align: center;
+  }
+  p,
+  ul {
+    text-align: left;
+  }
+  > p {
+    font-weight: bold;
+    padding-bottom: 12px;
+  }
+}
+.cases {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+.seeMore {
+  border: 1px solid $second;
+  padding: 4px 12px;
+}

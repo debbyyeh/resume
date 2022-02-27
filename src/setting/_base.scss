@@ -1,0 +1,38 @@
+// 全站樣式
+
+body {
+  font-family: 'Roboto', 'Noto Sans', '微軟正黑體', sans-serif;
+  line-height: 1.5;
+  color: $primary;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  // position: relative;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  display: block;
+  &:hover {
+    text-decoration: none;
+  }
+}
+input {
+  width: 100%;
+  display: inline-block;
+  background: transparent;
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none; /* FireFox */
+  appearance: none;
+  border-radius: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}

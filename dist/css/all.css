@@ -1,0 +1,706 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.alignC {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justifyC {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-12 {
+  padding-bottom: 12px;
+}
+@media (max-width: 414px) {
+  .pb-12 {
+    padding-bottom: 8px;
+  }
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+@media (max-width: 414px) {
+  .pb-24 {
+    padding-bottom: 8px;
+  }
+}
+
+.lh-40 {
+  line-height: 40px;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans", "微軟正黑體", sans-serif;
+  line-height: 1.5;
+  color: white;
+}
+body *,
+body *::before,
+body *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+a:hover {
+  text-decoration: none;
+}
+
+input {
+  width: 100%;
+  display: inline-block;
+  background: transparent;
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none;
+  /* FireFox */
+  appearance: none;
+  border-radius: 0;
+}
+input:hover {
+  cursor: pointer;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.alignC {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justifyC {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-12 {
+  padding-bottom: 12px;
+}
+@media (max-width: 414px) {
+  .pb-12 {
+    padding-bottom: 8px;
+  }
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+@media (max-width: 414px) {
+  .pb-24 {
+    padding-bottom: 8px;
+  }
+}
+
+.lh-40 {
+  line-height: 40px;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2f554c;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile {
+  opacity: 50%;
+}
+.profile img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .profile {
+    display: none;
+  }
+}
+
+.profilePhone {
+  display: none;
+}
+@media (max-width: 767px) {
+  .profilePhone {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+  }
+  .profilePhone img {
+    border-radius: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.intro {
+  width: 40%;
+  position: absolute;
+  right: 5%;
+  bottom: 35%;
+  text-align: center;
+}
+.intro h1 {
+  font-size: 40px;
+}
+.intro h2 {
+  font-size: 32px;
+}
+.intro p {
+  font-size: 28px;
+}
+@media (max-width: 992px) {
+  .intro {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .intro {
+    width: 100%;
+    padding: 20px 60px;
+    top: 0;
+    right: 0;
+  }
+  .intro h1 {
+    font-size: 36px;
+  }
+  .intro h2 {
+    font-size: 28px;
+  }
+  .intro p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 414px) {
+  .intro {
+    padding: 20px 40px;
+  }
+  .intro h1 {
+    font-size: 28px;
+  }
+  .intro h2 {
+    font-size: 20px;
+  }
+  .intro p {
+    font-size: 16px;
+  }
+}
+
+.introPhone {
+  margin-bottom: 20px;
+}
+
+.socialTitle {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+@media (max-width: 767px) {
+  .socialTitle {
+    display: none;
+  }
+}
+
+.circle {
+  border-radius: 100%;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+
+.circle1 {
+  right: 200px;
+  bottom: -100px;
+  background-color: #508a69;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 65px;
+}
+@media (max-width: 767px) {
+  .circle1 {
+    display: none;
+  }
+}
+
+.circle2 {
+  background-color: #2f554c;
+  -webkit-box-shadow: 2px 4px 12px;
+          box-shadow: 2px 4px 12px;
+  width: 250px;
+  height: 250px;
+  right: 75px;
+  bottom: -125px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 65px;
+}
+@media (max-width: 767px) {
+  .circle2 > a {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .circle2 {
+    right: -125px;
+    bottom: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0;
+    padding-left: 45px;
+    -webkit-box-shadow: 0 0 0;
+            box-shadow: 0 0 0;
+  }
+}
+@media (max-width: 414px) {
+  .circle2 {
+    border-color: transparent;
+    width: 150px;
+    height: 150px;
+    right: -75px;
+    bottom: 20px;
+    padding-left: 25px;
+    padding-bottom: 75px;
+  }
+}
+
+.socialPhone,
+.socialPhone1,
+.socialPhone2 {
+  display: none;
+}
+@media (max-width: 767px) {
+  .socialPhone,
+.socialPhone1,
+.socialPhone2 {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .socialPhone img,
+.socialPhone1 img,
+.socialPhone2 img {
+    width: 65px;
+    height: 65px;
+    margin: 8px 0px;
+  }
+}
+@media (max-width: 414px) {
+  .socialPhone,
+.socialPhone1,
+.socialPhone2 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+h3 {
+  color: #508a69;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 20%;
+  margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 414px) {
+  h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+
+h4 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-bottom: 4px;
+}
+
+.contentBg {
+  background-color: black;
+  opacity: 80%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainContent {
+  border: 1px solid white;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px;
+}
+@media (max-width: 992px) {
+  .mainContent {
+    padding: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .mainContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    border: none;
+  }
+}
+
+.contentPart1,
+.contentPart2 {
+  font-size: 24px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .contentPart1,
+.contentPart2 {
+    width: 100%;
+  }
+}
+@media (max-width: 414px) {
+  .contentPart1,
+.contentPart2 {
+    font-size: 20px;
+  }
+}
+
+.github {
+  color: white;
+}
+
+.contactList {
+  margin: 0 auto;
+}
+
+.contact img {
+  padding-right: 12px;
+}
+
+.skillList {
+  text-align: left;
+}
+.skillList li {
+  padding-bottom: 8px;
+}
+.skillList p {
+  padding-bottom: 4px;
+}
+
+.rate {
+  background-color: #f7941d;
+  width: 20px;
+  height: 8px;
+  border: 1px solid #f7941d;
+  margin-right: 10px;
+}
+
+.lineSection {
+  position: relative;
+}
+.lineSection ::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  left: -15px;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+@media (max-width: 767px) {
+  .lineSection ::after {
+    display: none;
+  }
+}
+
+.linePoint ::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 13px;
+  bottom: 0;
+  background-color: white;
+  left: -35px;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+}
+@media (max-width: 767px) {
+  .linePoint ::after {
+    display: none;
+  }
+}
+
+.working div {
+  display: none;
+}
+.working > p {
+  opacity: 30%;
+}
+.working > p:hover {
+  opacity: 100%;
+}
+.working > p:active {
+  color: #f7941d;
+}
+
+.workingTitle {
+  margin-bottom: 0;
+}
+
+.jobDescription {
+  border-radius: 50px;
+  border: 1px solid white;
+  margin: 0 auto;
+  padding: 24px;
+  height: 800px;
+  overflow-y: scroll;
+}
+.jobDescription h3 {
+  text-align: center;
+}
+.jobDescription p,
+.jobDescription ul {
+  text-align: left;
+}
+.jobDescription > p {
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+
+.cases {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+
+.seeMore {
+  border: 1px solid #508a69;
+  padding: 4px 12px;
+}

@@ -1,0 +1,49 @@
+// color
+
+$backgroundColor: #2f554c;
+$primary: white;
+$second: #508a69;
+$hightlight: #f7941d;
+
+@mixin bg($bgColor) {
+  background-color: $bgColor;
+}
+
+@mixin rate {
+  background-color: $hightlight;
+  width: 20px;
+  height: 8px;
+  border: 1px solid $hightlight;
+  margin-right: 10px;
+}
+// 縮寫
+.d-flex {
+  display: flex;
+}
+.alignC {
+  align-items: center;
+}
+.justifyC {
+  justify-content: center;
+}
+.w-50 {
+  width: 50%;
+}
+.pb-8 {
+  padding-bottom: 8px;
+}
+.pb-12 {
+  padding-bottom: 12px;
+  @media (max-width: 414px) {
+    padding-bottom: 8px;
+  }
+}
+.pb-24 {
+  padding-bottom: 24px;
+  @media (max-width: 414px) {
+    padding-bottom: 8px;
+  }
+}
+.lh-40 {
+  line-height: 40px;
+}
